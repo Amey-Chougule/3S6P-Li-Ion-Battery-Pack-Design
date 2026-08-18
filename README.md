@@ -279,8 +279,10 @@ documents.
 │   ├── 3S6P_configuration.png
 │   ├── battery_pack.jpg
 │   ├── battery_pack_top.jpg
-│   └── simulation_results.png
-│
+│   └── simulation_results.jpg
+│   └── BMS_Cell_Connection_Diagram.jpg
+|   └── 4S-40A-BMS-Module.jpg
+|
 ├── docs/
 │   ├── Battery_Pack_Design.pdf
 │   ├── Design_Calculations.pdf
