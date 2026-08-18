@@ -191,7 +191,7 @@ The physical battery pack was assembled using:
 - Custom mechanical enclosure/frame
 
 <figure>
-<img src="Images/battery_pack_2.jpg" alt="Battery Pack Top View" />
+<img src="Images/battery_pack_1.jpg" alt="Battery Pack Top View" />
 <figcaption aria-hidden="true">Battery Pack Top View</figcaption>
 </figure>
 
@@ -249,7 +249,7 @@ The approximately **12.5 V / 0.00 A** reading was observed on the
 integrated panel meter in the provided hardware photograph.
 
 <figure>
-<img src="Images/battery_pack_1" alt="Battery Pack" />
+<img src="Images/battery_pack_1.jpg" alt="Battery Pack" />
 <figcaption aria-hidden="true">Battery Pack</figcaption>
 </figure>
 
