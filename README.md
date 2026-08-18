@@ -113,7 +113,7 @@ The selected 3S BMS is used for:
 
 The following image shows the internal hardware/component areas of a **40 A BMS PCB**.
 
-![BMS Hardware Reference](Images/4S-40A-BMS-Module.jpg)
+![BMS Hardware Reference](Images/4S-40A-BMS-Module.webp)
 
 The board illustrates the typical protection and power-stage implementation, including:
 
