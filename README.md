@@ -7,7 +7,7 @@ electrical analysis, simulation, assembly, BMS integration, and
 validation of an **18-cell 3S6P lithium-ion battery pack**.
 
 <figure>
-<img src="Images/battery_pack_1.jpg" alt="3S6P Battery Pack" />
+<img src="images/battery_pack_1.jpg" alt="3S6P Battery Pack" />
 <figcaption aria-hidden="true">3S6P Battery Pack</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ battery pack**.
 ## 🔧 3S6P Configuration
 
 <figure>
-<img src="Images/3S6P_configuration.jpg" alt="3S6P Configuration" />
+<img src="images/3S6P_configuration.jpg" alt="3S6P Configuration" />
 <figcaption aria-hidden="true">3S6P Configuration</figcaption>
 </figure>
 
@@ -66,6 +66,67 @@ battery pack**.
 The series connection is made **between the parallel groups**, not by
 making all 18 positive terminals common or all 18 negative terminals
 common.
+
+------------------------------------------------------------------------
+
+## 🔌 BMS Integration & Cell Connections
+
+The pack uses a **3S 40 A BMS** for series-group monitoring, protection, and passive
+cell balancing.
+
+![BMS Cell Connection Diagram](images/BMS_Cell_Connection_Diagram.png)
+
+### BMS Connection Points
+
+| BMS Node | Connection Point | Typical Voltage |
+|---|---|---:|
+| **B− / 0V** | Pack negative | 0 V |
+| **S1** | Junction between Series Group 1 and Group 2 | ≈4.2 V max |
+| **S2** | Junction between Series Group 2 and Group 3 | ≈8.4 V max |
+| **B+** | Pack positive | ≈12.6 V max |
+
+The BMS sense connections monitor the three series-group voltage levels:
+
+```text
+B− / 0V ── Group 1 ── S1 ── Group 2 ── S2 ── Group 3 ── B+
+             3.7 V          3.7 V          3.7 V
+
+                         Total = 11.1 V nominal
+```
+
+### BMS Protection Functions
+
+The selected 3S BMS is used for:
+
+- Overcharge protection
+- Over-discharge protection
+- Over-current protection
+- Short-circuit protection
+- Passive cell balancing
+
+> **Important:** BMS terminal names and wiring positions can vary between boards.
+> Always verify the exact BMS markings and datasheet before connecting the battery cells.
+
+---
+
+## 🧩 BMS Hardware Reference
+
+The following image shows the internal hardware/component areas of a **40 A BMS PCB**.
+
+![BMS Hardware Reference](images/4S-40A-BMS-Module.webp)
+
+The board illustrates the typical protection and power-stage implementation, including:
+
+- Power MOSFET switching stage
+- Protection/control circuitry
+- Resistor networks
+- Series-group sensing circuitry
+- High-current power paths
+
+> **Important:** The pictured PCB is marked **4S 40A** and is included only as a
+> component-level hardware reference. The battery pack in this project is a
+> **3S6P pack and uses a 3S 40 A BMS**. A 4S BMS must not be substituted for the
+> 3S battery configuration.
 
 ------------------------------------------------------------------------
 
@@ -157,7 +218,7 @@ The pack was analyzed across a **0–30 A current range** for:
 - Load-dependent electrical behavior
 
 <figure>
-<img src="Images/simulation_results.jpg" alt="Simulation Results" />
+<img src="images/simulation_results.jpg" alt="Simulation Results" />
 <figcaption aria-hidden="true">Simulation Results</figcaption>
 </figure>
 
@@ -191,7 +252,7 @@ The physical battery pack was assembled using:
 - Custom mechanical enclosure/frame
 
 <figure>
-<img src="Images/battery_pack_1.jpg" alt="Battery Pack Top View" />
+<img src="images/battery_pack_1.jpg" alt="Battery Pack Top View" />
 <figcaption aria-hidden="true">Battery Pack Top View</figcaption>
 </figure>
 
@@ -249,7 +310,7 @@ The approximately **12.5 V / 0.00 A** reading was observed on the
 integrated panel meter in the provided hardware photograph.
 
 <figure>
-<img src="Images/battery_pack_1.jpg" alt="Battery Pack" />
+<img src="images/battery_pack_1.jpg" alt="Battery Pack" />
 <figcaption aria-hidden="true">Battery Pack</figcaption>
 </figure>
 
@@ -270,26 +331,24 @@ documents.
 
 ## 📁 Repository Structure
 
-``` text
+```text
 3S6P-Li-Ion-Battery-Pack-Design/
 │
 ├── README.md
+├── BOM.xlsx
 │
 ├── images/
 │   ├── 3S6P_configuration.png
-│   ├── battery_pack.jpg
-│   ├── battery_pack_top.jpg
-│   └── simulation_results.jpg
-│   └── BMS_Cell_Connection_Diagram.jpg
-|   └── 4S-40A-BMS-Module.jpg
-|
+│   ├── battery_pack_1.jpg
+│   ├── simulation_results.jpg
+│   ├── BMS_Cell_Connection_Diagram.png
+│   └── 4S-40A-BMS-Module.webp
+│
 ├── docs/
 │   ├── Battery_Pack_Design.pdf
 │   ├── Design_Calculations.pdf
 │   ├── Test_Report.pdf
 │   └── Safety_Notes.md
-│
-├── BOM.xlsx
 │
 └── LICENSE
 ```
@@ -300,10 +359,10 @@ documents.
 
 | Document                                            | Description                                              |
 |-----------------------------------------------------|----------------------------------------------------------|
-| [Battery Pack Design](Docs/Battery_Pack_Design.pdf) | Complete project design and implementation report        |
-| [Design Calculations](Docs/Design_Calculations.pdf) | Electrical calculations and performance model            |
-| [Test Report](Docs/Test_Report.pdf)                 | Hardware observations and validation results             |
-| [Safety Notes](Docs/Safety_Notes.md)                | Battery handling, charging, testing, and safety guidance |
+| [Battery Pack Design](docs/Battery_Pack_Design.pdf) | Complete project design and implementation report        |
+| [Design Calculations](docs/Design_Calculations.pdf) | Electrical calculations and performance model            |
+| [Test Report](docs/Test_Report.pdf)                 | Hardware observations and validation results             |
+| [Safety Notes](docs/Safety_Notes.md)                | Battery handling, charging, testing, and safety guidance |
 | [BOM](BOM.xlsx)                                     | Hardware bill of materials                               |
 
 ------------------------------------------------------------------------
@@ -384,7 +443,7 @@ Always:
 - Monitor temperature during high-current operation.
 - Never intentionally short-circuit the battery.
 
-See [Safety_Notes.md](Docs/Safety_Notes.md) for detailed project safety
+See [Safety_Notes.md](docs/Safety_Notes.md) for detailed project safety
 guidance.
 
 ------------------------------------------------------------------------
