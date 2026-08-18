@@ -7,7 +7,7 @@ electrical analysis, simulation, assembly, BMS integration, and
 validation of an **18-cell 3S6P lithium-ion battery pack**.
 
 <figure>
-<img src="images/battery_pack_1.jpg" alt="3S6P Battery Pack" />
+<img src="Images/battery_pack_1.jpg" alt="3S6P Battery Pack" />
 <figcaption aria-hidden="true">3S6P Battery Pack</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ battery pack**.
 ## 🔧 3S6P Configuration
 
 <figure>
-<img src="images/3S6P_configuration.jpg" alt="3S6P Configuration" />
+<img src="Images/3S6P_configuration.jpg" alt="3S6P Configuration" />
 <figcaption aria-hidden="true">3S6P Configuration</figcaption>
 </figure>
 
@@ -74,7 +74,7 @@ common.
 The pack uses a **3S 40 A BMS** for series-group monitoring, protection, and passive
 cell balancing.
 
-![BMS Cell Connection Diagram](images/BMS_Cell_Connection_Diagram.png)
+![BMS Cell Connection Diagram](Images/BMS_Cell_Connection_Diagram.png)
 
 ### BMS Connection Points
 
@@ -113,7 +113,7 @@ The selected 3S BMS is used for:
 
 The following image shows the internal hardware/component areas of a **40 A BMS PCB**.
 
-![BMS Hardware Reference](images/4S-40A-BMS-Module.webp)
+![BMS Hardware Reference](Images/4S-40A-BMS-Module.jpg)
 
 The board illustrates the typical protection and power-stage implementation, including:
 
@@ -218,7 +218,7 @@ The pack was analyzed across a **0–30 A current range** for:
 - Load-dependent electrical behavior
 
 <figure>
-<img src="images/simulation_results.jpg" alt="Simulation Results" />
+<img src="Images/simulation_results.jpg" alt="Simulation Results" />
 <figcaption aria-hidden="true">Simulation Results</figcaption>
 </figure>
 
@@ -252,7 +252,7 @@ The physical battery pack was assembled using:
 - Custom mechanical enclosure/frame
 
 <figure>
-<img src="images/battery_pack_1.jpg" alt="Battery Pack Top View" />
+<img src="Images/battery_pack_1.jpg" alt="Battery Pack Top View" />
 <figcaption aria-hidden="true">Battery Pack Top View</figcaption>
 </figure>
 
@@ -310,7 +310,7 @@ The approximately **12.5 V / 0.00 A** reading was observed on the
 integrated panel meter in the provided hardware photograph.
 
 <figure>
-<img src="images/battery_pack_1.jpg" alt="Battery Pack" />
+<img src="Images/battery_pack_1.jpg" alt="Battery Pack" />
 <figcaption aria-hidden="true">Battery Pack</figcaption>
 </figure>
 
@@ -359,10 +359,10 @@ documents.
 
 | Document                                            | Description                                              |
 |-----------------------------------------------------|----------------------------------------------------------|
-| [Battery Pack Design](docs/Battery_Pack_Design.pdf) | Complete project design and implementation report        |
-| [Design Calculations](docs/Design_Calculations.pdf) | Electrical calculations and performance model            |
-| [Test Report](docs/Test_Report.pdf)                 | Hardware observations and validation results             |
-| [Safety Notes](docs/Safety_Notes.md)                | Battery handling, charging, testing, and safety guidance |
+| [Battery Pack Design](Docs/Battery_Pack_Design.pdf) | Complete project design and implementation report        |
+| [Design Calculations](Docs/Design_Calculations.pdf) | Electrical calculations and performance model            |
+| [Test Report](Docs/Test_Report.pdf)                 | Hardware observations and validation results             |
+| [Safety Notes](Docs/Safety_Notes.md)                | Battery handling, charging, testing, and safety guidance |
 | [BOM](BOM.xlsx)                                     | Hardware bill of materials                               |
 
 ------------------------------------------------------------------------
@@ -443,7 +443,7 @@ Always:
 - Monitor temperature during high-current operation.
 - Never intentionally short-circuit the battery.
 
-See [Safety_Notes.md](docs/Safety_Notes.md) for detailed project safety
+See [Safety_Notes.md](Docs/Safety_Notes.md) for detailed project safety
 guidance.
 
 ------------------------------------------------------------------------
